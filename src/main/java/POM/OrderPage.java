@@ -35,12 +35,6 @@ public class OrderPage {
     //поле выбора срока аренды:
     private final By rentalPeriod = By.xpath(".//div[@class='Dropdown-placeholder']");
 
-    //выбор 1 суток в качестве срока аренды:
-    private final By oneDay = By.xpath(".//div[contains(text(),'сутки')]");
-
-    //выбор цвета "серая безысходность":
-    private final By colourOfScooter = By.id("grey");
-
     //поле ввода комментария для курьера:
     private final By comment = By.xpath(".//input[@placeholder='Комментарий для курьера']");
 
@@ -72,8 +66,9 @@ public class OrderPage {
         driver.findElement(addressField).sendKeys(text);
     }
 
-   public void selectMetroStation(){//выбор станции метро
+   public void selectMetroStation(String metro){//выбор станции метро
         driver.findElement(metroStationField).click();
+        driver.findElement(metroStationField).sendKeys(metro);
         driver.findElement(metroStationField).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
    }
 
@@ -85,22 +80,21 @@ public class OrderPage {
         driver.findElement(daleeButton).click();
     }
 
-    public void selectDeliveryDate(){//выбор даты доставки
+    public void selectDeliveryDate(String text){//выбор даты доставки
         driver.findElement(deliveryDate).click();
-        driver.findElement(deliveryDate).sendKeys("10.11.2022", Keys.ENTER);
+        driver.findElement(deliveryDate).sendKeys(text, Keys.ENTER);
     }
-
-    public void selectRentalPeriod(){//выбор периода аренды
+    public void selectRentalPeriod(String period){//выбор периода аренды
         driver.findElement(rentalPeriod).click();
-        driver.findElement(oneDay).click();
+        driver.findElement(By.xpath(".//div[@class='Dropdown-menu']/div[text()='" +period+"']")).click();
     }
 
-    public void clickColourOfScooter(){//выбор серого цвета самоката
-        driver.findElement(colourOfScooter).click();
+    public void clickColourOfScooter(String text){//выбор цвета самоката
+        driver.findElement(By.id(text)).click();
     }
 
-    public void inputComment(){//ввод комментария для курьера
-        driver.findElement(comment).sendKeys("Пивка 2 литра захвати");
+    public void inputComment(String text){//ввод комментария для курьера
+        driver.findElement(comment).sendKeys(text);
     }
 
     public void clickFinalOrderButton(){//клик на кнопку "Заказать"
@@ -113,6 +107,6 @@ public class OrderPage {
 
     public void checkOrderIsAccepted(){//удостоверимся, что заказ прошёл
         String textOfAccepted = driver.findElement(orderIsAccepted).getText();
-        Assert.assertThat("Заказ не оформлен", textOfAccepted, startsWith("Заказ оформлен"));
+        Assert.assertThat("Ошибка в оформлении заказа", textOfAccepted, startsWith("Заказ оформлен"));
     }
 }

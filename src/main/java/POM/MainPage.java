@@ -57,19 +57,15 @@ public class MainPage {
         driver.get(url);
     }
 
-    public void clickOrderTopButton(){    //закрыть оповещение о куки и кликнуть на кнопку "Заказать" наверху справа:
-        driver.findElement(cookieButton).click();
-        driver.findElement(orderTopButton).click();
+    public void clickOrderButton (int numberOfButton) { // выбрать кнопку для заказа: 1 - кнопка наверху справа, 2 - кнопка внизу
+        if (numberOfButton == 0) {
+            driver.findElement(orderTopButton).click();
+        } else if (numberOfButton == 1) {
+         WebElement element = driver.findElement(By.className("accordion"));
+         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+         driver.findElement(orderBottomButton).click();
+        }
     }
-
-    public void clickOrderBottomButton(){    //закрыть оповещение о куки, проскроллить вниз и кликнуть на большую кнопку "Заказать" внизу страницы:
-        driver.findElement(cookieButton).click();
-        WebElement element = driver.findElement(By.className("accordion"));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",element);
-        driver.findElement(orderBottomButton).click();
-    }
-
-
 
     public void checkPriceQuestion(){    //кликнуть на вопрос "Сколько это стоит? И как оплатить?", вытащить текст с открывшегося ответа на вопрос, сравнить с ожидаемым ответом, вывести сообщение в консоль:
         driver.findElement(priceQuestion).click();

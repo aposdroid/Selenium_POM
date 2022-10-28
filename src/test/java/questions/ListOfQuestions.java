@@ -20,7 +20,7 @@ public class ListOfQuestions {
     @Before
     public void setUp() {
         driver = new ChromeDriver();// для проверки в хроме
-  //      driver = new FirefoxDriver();// для проверки в фаерфоксе
+        //driver = new FirefoxDriver();// для проверки в фаерфоксе
         MainPage mainPage = new MainPage(driver);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
