@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="385c38c2-0d23-4d4b-bd4a-e5cd6de51fa8" name="Changes" comment="добавил комментарии. добавил проверку успешности прохождения заказа">
-      <change afterPath="$PROJECT_DIR$/src/test/java/order/OrderButton.java" afterDir="false" />
+    <list default="true" id="385c38c2-0d23-4d4b-bd4a-e5cd6de51fa8" name="Changes" comment="сделал параметризацию">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/POM/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/POM/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/POM/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/POM/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/order/OrderWithBottomButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/order/OrderWithTopButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/questions/ListOfQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/questions/ListOfQuestions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -37,17 +36,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "E:/IDEA projects/sprint4-webinar"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/IDEA projects/sprint4-webinar&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.ListOfQuestions">
+}</component>
+  <component name="RunManager" selected="JUnit.OrderButton">
     <configuration name="ListOfQuestions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint4_FinalProject" />
+      <module name="Sprint4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="questions.*" />
@@ -62,7 +60,7 @@
       </method>
     </configuration>
     <configuration name="OrderButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint4_FinalProject" />
+      <module name="Sprint4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="order.*" />
@@ -77,7 +75,7 @@
       </method>
     </configuration>
     <configuration name="OrderButton.orderScooter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint4_FinalProject" />
+      <module name="Sprint4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="order.*" />
@@ -93,7 +91,7 @@
       </method>
     </configuration>
     <configuration name="OrderWithBottomButton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint4_FinalProject" />
+      <module name="Sprint4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="order.*" />
@@ -108,7 +106,7 @@
       </method>
     </configuration>
     <configuration name="order in Sprint4_FinalProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sprint4_FinalProject" />
+      <module name="Sprint4" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="order.*" />
@@ -123,8 +121,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ListOfQuestions" />
         <item itemvalue="JUnit.OrderButton" />
+        <item itemvalue="JUnit.ListOfQuestions" />
         <item itemvalue="JUnit.OrderButton.orderScooter" />
         <item itemvalue="JUnit.order in Sprint4_FinalProject" />
         <item itemvalue="JUnit.OrderWithBottomButton" />
@@ -147,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666950998503</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="сделал параметризацию">
+      <created>1666976579918</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666976579918</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,7 +160,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -163,6 +180,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="добавил комментарии. добавил проверку успешности прохождения заказа" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил комментарии. добавил проверку успешности прохождения заказа" />
+    <MESSAGE value="сделал параметризацию" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделал параметризацию" />
   </component>
 </project>
