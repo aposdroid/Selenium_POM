@@ -1,4 +1,4 @@
-# Selenium POM
+# Тестирование сайта "https://qa-scooter.praktikum-services.ru/" при помощи Selenium и POM
 
 Создал POM для главной страницы MainPage и страницы заказа OrderPage
 
