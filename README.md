@@ -1,4 +1,4 @@
-# Sprint4_FinalProject
+# Selenium POM
 
 Создал POM для главной страницы MainPage и страницы заказа OrderPage
 
